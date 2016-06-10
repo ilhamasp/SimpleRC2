@@ -17,7 +17,7 @@ namespace simple_sample_rc2.Controllers
         public string Index()
         {
             return $"The connection string is {Startup.ConnectionString}";
-            // Test Sync again
+            // Test Sync Jenkins
         }
     }
 }
