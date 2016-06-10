@@ -7,5 +7,9 @@ COPY . /app
 WORKDIR /app
 RUN ["dotnet", "restore"]
 
+ADD myProgramName.sh /var/apps/myProgramName.sh
+ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+CMD ["/usr/bin/supervisord"]
+
 EXPOSE 5000
 ENTRYPOINT ["dotnet", "run"]
